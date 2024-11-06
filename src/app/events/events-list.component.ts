@@ -2,13 +2,19 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'events-list',
-  templateUrl: './events-list.component.html',
+  template: `
+    <div>
+      <h2>Composant Parent</h2>
+      <event-thumbnail [event]="event1"></event-thumbnail>
+      <hr />
+    </div>
+  `,
 })
 export class EventsListComponent {
   title = 'Event List Component';
-  event = {
+  event1 = {
     id: 1,
-    name: 'Angular Workshop',
+    name: 'Angular Workshop 1',
     date: new Date(2024, 11, 15), // December 15, 2024
     location: {
       address: '123 Angular Lane',
